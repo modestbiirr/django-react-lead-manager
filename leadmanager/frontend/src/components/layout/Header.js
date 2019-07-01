@@ -13,28 +13,23 @@ export class Header extends Component {
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
-      <ul classname="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <span className="navbar-text mr-3">
           <strong>{user ? `Welcome ${user.username}` : ""}</strong>
         </span>
         <li className="nav-item">
           <button
             onClick={this.props.logout}
-            className="nav-link btn btn-info btn-sm text-light"
+            className="nav-link btn btn-primary btn-sm text-light"
           >
             Logout
           </button>
-        </li>
-        <li className="nav-item">
-          <Link to="/login" className="nav-link">
-            Login
-          </Link>
         </li>
       </ul>
     );
 
     const guestLinks = (
-      <ul classname="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <li className="nav-item">
           <Link to="/register" className="nav-link">
             Register
@@ -49,10 +44,10 @@ export class Header extends Component {
     );
 
     return (
-      <nav classname="navbar navbar-expand-sm navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
         <div className="container">
           <button
-            classname="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarTogglerDemo01"
@@ -60,10 +55,10 @@ export class Header extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span classname="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button>
-          <div classname="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a classname="navbar-brand" href="#">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a className="navbar-brand" href="#">
               Lead Managers
             </a>
           </div>
